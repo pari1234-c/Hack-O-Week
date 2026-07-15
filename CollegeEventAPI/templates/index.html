@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>College Event Management</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<h1>🎓 College Event Management System</h1>
+
+<p>Manage all college events in one place</p>
+
+</div>
+
+<div class="card">
+
+<h2>Add New Event</h2>
+
+<div class="form">
+
+<input type="number" id="id" placeholder="Event ID">
+
+<input type="text" id="event_name" placeholder="Event Name">
+
+<input type="text" id="club" placeholder="Club">
+
+<input type="text" id="venue" placeholder="Venue">
+
+<input type="date" id="date">
+
+<select id="status">
+
+<option>Upcoming</option>
+
+<option>Completed</option>
+
+</select>
+
+<button onclick="addEvent()">➕ Add Event</button>
+
+</div>
+
+</div>
+
+<div class="table-card">
+
+<h2>📅 Event List</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Event</th>
+
+<th>Club</th>
+
+<th>Venue</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="eventTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
